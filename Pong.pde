@@ -61,6 +61,7 @@ void keyReleased(){
 }
 
 void draw(){
+  int m = millis();
   background(0);
   if(keys[0]){
     p1 = p1 - 15;
@@ -102,4 +103,6 @@ void draw(){
   bally = bally + adsuby;
   text(leftscore, 30, 60);
   text(rightscore, 400, 60);
+  int time = m/1000;
+  text (time, 200, 60);
 } 
