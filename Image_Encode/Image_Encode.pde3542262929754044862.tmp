@@ -1,0 +1,41 @@
+PImage img;
+PImage code;
+PImage code2;
+PImage encoded;
+int dimensions;
+int numred = 0;
+
+void setup(){
+  img = loadImage("me.jpg");
+  code = loadImage("random-001.png");
+  code2 = loadImage("random-003.png");
+  size(1024, 1024);
+  dimensions = img.width * img.height;
+  encoded = createImage(img.width, img.height, RGB);
+  img.loadPixels();
+  code.loadPixels();
+  code2.loadPixels();
+  encoded.loadPixels();
+}
+
+void draw(){
+  for(int q = 0; q < dimensions; q++){
+    if(red(code.pixels[q]) > 192 && blue(code.pixels[q]) < 64 ** green(code.pixels[q] < 64){
+    numred++;
+    }
+    
+    
+  }
+  /*int newred = int(map(red * red2 * red3, 0, 1, 0, 255));
+    int newgreen = int(map(green * green2 * red3, 0, 1, 0, 255));
+    int newblue = int(map(blue * blue2 * red3, 0, 1, 0, 255));
+    encoded.pixels[q] = int(color(newred, newgreen, newblue));*/
+  encoded.updatePixels();
+  image(encoded, 0, 0);
+  saveFrame("encoded.png");
+  println(numred);
+  noLoop();
+}
+    
+    
+  
