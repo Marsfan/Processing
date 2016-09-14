@@ -32,6 +32,10 @@ void draw(){
       tint(0,0,255);
     }else if(key == 'n'){
       tint(255, 255, 255);
+    }else if(key =='p'){
+      tint(255, 0, 255);
+    }else if(key == 'y'){
+      tint(255, 255, 0);
     }
   }
   if(keyPressed){
@@ -41,8 +45,8 @@ void draw(){
       tint = tint - 5;
     }
   }
-  tint = constrain(tint, 0, 255);
-  tint(tint);
+  //tint = constrain(tint, 0, 255);
+ // tint(tint);
 }
 
   
